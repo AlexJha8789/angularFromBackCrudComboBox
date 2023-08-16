@@ -1,0 +1,24 @@
+<p>listar-motor works!</p>
+<button (click)="nuevo()" class="btn btn-warning">Agregar</button>
+<table class="table table-hover">
+    <thead >
+        <tr>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let motor of motors">
+            <td>{{motor.id}}</td>
+            <td>{{motor.desMotor}}</td>
+           
+            <td>
+                <button (click)="editar(motor)" class="btn btn-warning">Editar</button>
+                <button (click)="eliminar(motor)" class="btn btn-danger">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

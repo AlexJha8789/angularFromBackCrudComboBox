@@ -1,0 +1,24 @@
+<p>listar-color works!</p>
+<button (click)="nuevo()" class="btn btn-warning">Agregar</button>
+<table class="table table-hover">
+    <thead >
+        <tr>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let color of colors">
+            <td>{{color.id}}</td>
+            <td>{{color.desColor}}</td>
+           
+            <td>
+                <button (click)="editar(color)" class="btn btn-warning">Editar</button>
+                <button (click)="eliminar(color)" class="btn btn-danger">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

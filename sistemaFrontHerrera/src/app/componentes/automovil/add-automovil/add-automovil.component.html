@@ -1,0 +1,68 @@
+<p>add-automovil works!</p>
+<div class="container col-md-6">
+    <div class="card-header">
+        <h3> Agregar Automoviles</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+
+            <div class="form-group">
+                <label for="">Marcas:</label>
+                <div>
+                  <select name="marca" [(ngModel)]="modelAutomovil.marca" class="form-control">
+                    <option value="" disabled> Elige una Marca:</option>
+                    <option *ngFor="  let marca of marcas " [ngValue]="marca">
+                      {{marca.desMarca}} </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="">Motor:</label>
+                <div>
+                  <select name="motor" [(ngModel)]="modelAutomovil.motor" class="form-control">
+                    <option value="" disabled> Elige un Motor:</option>
+                    <option *ngFor="  let motor of motors " [ngValue]="motor">
+                      {{motor.desMotor}} </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="">Color:</label>
+                <div>
+                  <select name="color" [(ngModel)]="modelAutomovil.color" class="form-control">
+                    <option value="" disabled> Elige un Color:</option>
+                    <option *ngFor="  let color of colors " [ngValue]="color">
+                      {{color.desColor}} </option>
+                  </select>
+                </div>
+              </div>
+ 
+            
+
+
+           
+
+            <div class="form-group">
+                <label for="">AñoFabricacion:</label>
+                <input type="text" [(ngModel)]="modelAutomovil.anioFabricacion" name="anioFabricacion" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Cilindrada:</label>
+                <input type="text" [(ngModel)]="modelAutomovil.cilindrada" name="cilindrada" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">NumPuertas:</label>
+                <input type="text" [(ngModel)]="modelAutomovil.numPuertas" name="numPuertas" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Precio:</label>
+                <input type="text" [(ngModel)]="modelAutomovil.precio" name="precio" class="form-control">
+            </div>
+            <button (click)="guardar(modelAutomovil)"  class="btn btn-danger">Guardar</button>
+            
+        </form>
+
+    </div>
+</div>

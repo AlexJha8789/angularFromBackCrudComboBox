@@ -1,0 +1,36 @@
+<p>listar-automovil works!</p>
+
+<button (click)="nuevo()" class="btn btn-warning">Agregar</button>
+<table class="table table-hover">
+    <thead >
+        <tr>
+            <th>Codigo</th>
+            <th>Marca</th>
+            <th>Motor</th>
+            <th>Color</th>
+            <th>AñoFabricacion</th>
+            <th>Cilindrada</th>
+            <th>NumPuertas</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let automovil of automovils">
+            <td>{{automovil.id}}</td>
+            <td>{{automovil.marca.desMarca}}</td>
+            <td>{{automovil.motor.desMotor}}</td>
+            <td>{{automovil.color.desColor}}</td>
+            <td>{{automovil.anioFabricacion}}</td>
+            <td>{{automovil.cilindrada}}</td>
+            <td>{{automovil.numPuertas}}</td>
+            <td>{{automovil.precio}}</td>
+            <td>
+                <button (click)="editar(automovil)" class="btn btn-warning">Editar</button>
+                <button (click)="eliminar(automovil)" class="btn btn-danger">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+<p>add-motor works!</p>
+<div class="container col-md-6">
+    <div class="card-header">
+        <h3> Agregar Motor</h3>
+    </div>
+    <div class="card-body">
+        <form action="">
+ 
+            <div class="form-group">
+                <label for="">Descripcion:</label>
+                <input type="text" [(ngModel)]="modelMotor.desMotor" name="desMotor" class="form-control">
+            </div>
+            <button (click)="guardar(modelMotor)"  class="btn btn-danger">Guardar</button>
+            
+        </form>
+
+    </div>
+</div>
